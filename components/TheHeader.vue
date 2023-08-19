@@ -1,9 +1,9 @@
 <template>
   <div class="navbar">
-    <h2 @click="$router.push('/')">Vue 3</h2>
+    <NuxtLink class="navbar__logo" to="/">Vue 3</NuxtLink>
     <div class="navbar__btns">
-      <my-button @click="$router.push('/posts')">Posts</my-button>
-      <my-button @click="$router.push('/about')">About</my-button>
+      <NuxtLink to="/posts">Posts</NuxtLink>
+      <NuxtLink to="/about">About</NuxtLink>
     </div>
   </div>
 </template>
@@ -20,7 +20,14 @@ h2 {
   justify-content: space-between;
   background: paleturquoise;
 }
+
+.navbar__logo {
+  font-weight: 700;
+  font-size: 25px;
+}
+
 .navbar__btns {
+  font-size: 20px;
   display: flex;
   gap: 10px;
 }
